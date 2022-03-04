@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, unnecessary_null_comparison, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, unnecessary_null_comparison, prefer_const_constructors, deprecated_member_use
 
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/pages/home_detail_page.dart';
@@ -52,7 +52,7 @@ class CatalogItem extends StatelessWidget {
                   .toString()
                   .text
                   .lg
-                  .color(MyTheme.darkBluishColor)
+                  .color(context.accentColor)
                   .bold
                   .make(),
               Text(
@@ -67,10 +67,10 @@ class CatalogItem extends StatelessWidget {
                   "\$${catalog.price}".toString().text.bold.xl.make(),
                   ElevatedButton(
                     onPressed: () {},
-                    child: "Buy".text.make(),
+                    child: "Add to Cart".text.make(),
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all(MyTheme.darkBluishColor),
+                          MaterialStateProperty.all(context.theme.buttonColor),
                       shape: MaterialStateProperty.all(StadiumBorder()),
                     ),
                   )
@@ -80,6 +80,6 @@ class CatalogItem extends StatelessWidget {
           ))
         ],
       ),
-    ).white.rounded.square(150).make().py16();
+    ).color(context.cardColor).rounded.square(150).make().py16();
   }
 }

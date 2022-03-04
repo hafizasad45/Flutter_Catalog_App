@@ -1,11 +1,13 @@
-// ignore_for_file: prefer_const_constructors, unnecessary_null_comparison, use_key_in_widget_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_null_comparison, use_key_in_widget_constructors, deprecated_member_use
 
 import 'dart:convert';
 
 import 'package:catalog_app/models/catalog.dart';
+import 'package:catalog_app/utils/routes.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_header.dart';
 import 'package:catalog_app/widgets/home_widgets/catalog_list.dart';
 import 'package:catalog_app/widgets/themes.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -38,7 +40,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creamColor,
+      backgroundColor: context.canvasColor,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        child: Icon(
+          CupertinoIcons.cart,
+          color: Colors.white,
+        ),
+        backgroundColor: context.theme.buttonColor,
+      ),
       body: SafeArea(
         child: Container(
             padding: Vx.m32,

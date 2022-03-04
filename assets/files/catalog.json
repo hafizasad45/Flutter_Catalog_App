@@ -5,7 +5,7 @@
             "description": "Apple iPhone 12th generation",
             "price": 999,
             "color": "#33505a",
-            "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRISJ6msIu4AU9_M9ZnJVQVFmfuhfyJjEtbUm3ZK11_8IV9TV25-1uM5wHjiFNwKy99w0mR5Hk&usqp=CAc"
+            "imageURL": "https://m.media-amazon.com/images/I/712yl2wTDbL._AC_SX522_.jpg"
         },
         {
             "id": 2,
@@ -13,7 +13,7 @@
             "description": "Google Pixel phone 5th generation",
             "price": 699,
             "color": "#00ac51",
-            "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+            "imageURL": "https://plusportal.net/wp-content/uploads/2021/09/Google-Pixel-5.jpg"
         },
         {
             "id": 3,
@@ -21,7 +21,7 @@
             "description": "Apple Macbook air with apple silicon",
             "price": 1099,
             "color": "#e0bfae",
-            "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+            "imageURL": "https://helios-i.mashable.com/imagery/articles/04Whvorj2I2kJWw3KedxeWq/hero-image.fill.size_1248x702.v1617123748.png"
         },
         {
             "id": 4,
@@ -29,7 +29,7 @@
             "description": "Sony Playstation 5th generation",
             "price": 500,
             "color": "#544ee4",
-            "imageURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+            "imageURL": "https://www.gizmochina.com/wp-content/uploads/2020/11/PlayStation-5-FAQ.jpg"
         },
         {
             "id": 5,

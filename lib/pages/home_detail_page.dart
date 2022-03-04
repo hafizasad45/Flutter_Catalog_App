@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_null_comparison, prefer_const_constructors
+// ignore_for_file: unnecessary_null_comparison, prefer_const_constructors, deprecated_member_use
 
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/widgets/themes.dart';
@@ -15,10 +15,12 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      backgroundColor: MyTheme.creamColor,
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
         child: ButtonBar(
           alignment: MainAxisAlignment.spaceBetween,
           buttonPadding: EdgeInsets.zero,
@@ -26,13 +28,13 @@ class HomeDetailPage extends StatelessWidget {
             "\$${catalog.price}".toString().text.bold.xl4.red800.make(),
             ElevatedButton(
               onPressed: () {},
-              child: "Buy".text.make(),
+              child: "Add to Cart".text.make(),
               style: ButtonStyle(
                 backgroundColor:
-                    MaterialStateProperty.all(MyTheme.darkBluishColor),
+                    MaterialStateProperty.all(context.theme.buttonColor),
                 shape: MaterialStateProperty.all(StadiumBorder()),
               ),
-            ).wh(100, 50)
+            ).wh(120, 50)
           ],
         ).p32(),
       ),
@@ -50,7 +52,7 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
@@ -58,7 +60,7 @@ class HomeDetailPage extends StatelessWidget {
                         .toString()
                         .text
                         .xl4
-                        .color(MyTheme.darkBluishColor)
+                        .color(context.accentColor)
                         .bold
                         .make(),
                     Text(
@@ -69,6 +71,13 @@ class HomeDetailPage extends StatelessWidget {
                       ),
                     ),
                     10.heightBox,
+                    Text(
+                      "The iPhone 12 Pro and iPhone 12 Pro Max are smartphones designed and marketed by Apple Inc. They are the flagship smartphones in the fourteenth generation of the iPhone, succeeding the iPhone 11 Pro and iPhone 11 Pro Max",
+                      style: TextStyle(
+                        color: Colors.grey,
+                        fontSize: 12,
+                      ),
+                    ).p4(),
                   ],
                 ).py64(),
               ),
