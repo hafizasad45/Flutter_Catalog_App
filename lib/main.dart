@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, unused_import
 
 import 'package:catalog_app/pages/login_page.dart';
 import 'package:catalog_app/utils/routes.dart';
