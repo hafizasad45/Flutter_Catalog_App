@@ -33,7 +33,7 @@ class MyTheme {
           centerTitle: true,
           elevation: 0.0,
           iconTheme: IconThemeData(color: Colors.white),
-          titleTextStyle: TextStyle(color: Colors.black, fontSize: 22),
+          titleTextStyle: TextStyle(color: Colors.white, fontSize: 22),
         ),
       );
 

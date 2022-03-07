@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, unnecessary_null_comparison, prefer_const_constructors, deprecated_member_use
+// ignore_for_file: use_key_in_widget_constructors, unnecessary_null_comparison, prefer_const_constructors, deprecated_member_use, unused_import
 
 import 'package:catalog_app/models/catalog.dart';
 import 'package:catalog_app/pages/home_detail_page.dart';
@@ -14,7 +14,7 @@ class CatalogList extends StatelessWidget {
       shrinkWrap: true,
       itemCount: CatalogModel.items.length,
       itemBuilder: (context, index) {
-        final catalog = CatalogModel.items[index];
+        final catalog = CatalogModel.getByPosition(index);
         return InkWell(
             onTap: () => Navigator.push(
                 context,
