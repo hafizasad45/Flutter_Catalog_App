@@ -4,26 +4,26 @@ class CatalogModel {
   static List<Item> items = [];
 
   //Get Item by ID
-  static Item getById(int Id) =>
+  Item getById(int Id) =>
       items.firstWhere((element) => element.id == Id, orElse: null);
 
   // Get Item by position
-  static Item getByPosition(int pos) => items[pos];
+  Item getByPosition(int pos) => items[pos];
 }
 
 class Item {
-  final int? id;
+  final int id;
   final String? name;
   final String? description;
-  final num? price;
+  final num price;
   final String? color;
   final String? imageURL;
 
   Item(
-      {this.id,
+      {required this.id,
       this.name,
       this.description,
-      this.price,
+      required this.price,
       this.color,
       this.imageURL});
 
