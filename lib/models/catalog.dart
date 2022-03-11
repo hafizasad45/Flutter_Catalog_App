@@ -1,10 +1,6 @@
 // ignore_for_file: null_closures, non_constant_identifier_names
 
 class CatalogModel {
-  static final catModel = CatalogModel._internal();
-  CatalogModel._internal();
-  factory CatalogModel() => catModel;
-
   static List<Item> items = [];
 
   //Get Item by ID
