@@ -1,7 +1,9 @@
-// ignore_for_file: unused_field, unnecessary_null_comparison
+// ignore_for_file: unused_field, unnecessary_null_comparison, unused_import, import_of_legacy_library_into_null_safe
 
+import 'package:catalog_app/core/store.dart';
 import 'package:catalog_app/models/catalog.dart';
 import 'package:flutter/foundation.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class CartModel {
   // catalog filed
@@ -25,15 +27,20 @@ class CartModel {
   num get totalPrice =>
       items.fold(0, (total, current) => total + current.price);
 
-  // Add item
-
-  void add(Item item) {
-    _itemIds.add(item.id);
-  }
-
   // Remove item
 
   void remove(Item item) {
     _itemIds.remove(item.id);
+  }
+}
+
+class AddMutation extends VxMutation<MyStore> {
+  final Item item;
+
+  AddMutation(this.item);
+
+  @override
+  perform() {
+    store?.cart._itemIds.add(item.id);
   }
 }
